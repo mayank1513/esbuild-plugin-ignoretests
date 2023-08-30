@@ -1,4 +1,4 @@
-import { ForkMe } from "@mayank1513/fork-me/server";
+import { ForkMe } from "fork-me-react/server";
 
 export default function Page(): JSX.Element {
 	return (

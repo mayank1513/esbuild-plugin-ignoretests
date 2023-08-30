@@ -1,0 +1,48 @@
+{
+	"name": "esbuild-plugin-ignoretests",
+	"author": "Mayank Kumar Chaudhari <https://mayank-chaudhari.vercel.app>",
+	"private": false,
+	"version": "0.0.0",
+	"description": "An intuitive React.js fork me ribbon component for promoting open source project forks.",
+	"main": "./index.ts",
+	"types": "./index.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mayank1513/esbuild-plugin-ignoretests.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mayank1513/esbuild-plugin-ignoretests/issues"
+	},
+	"homepage": "https://github.com/mayank1513/esbuild-plugin-ignoretests/tree/main/packages/ui#readme",
+	"sideEffects": false,
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc && node touchup.js",
+		"test": "vitest run",
+		"publish-package": "cd dist && npm publish --access public"
+	},
+	"devDependencies": {
+		"@types/node": "^18",
+		"esbuild": "^0.18.17",
+		"typescript": "^5.1.6",
+		"vitest": "^0.34.1"
+	},
+	"funding": {
+		"type": "github",
+		"url": "https://github.com/sponsors/mayank1513"
+	},
+	"keywords": [
+		"esbuild",
+		"esbuild-plugin",
+		"esbuild-plugin-ignoretests",
+		"esbuild-plugin-ignore",
+		"ignore",
+		"ignoretests",
+		"tsup",
+		"typescript",
+		"react-server-components",
+		"react-client-components",
+		"javascript",
+		"mayank1513"
+	]
+}
