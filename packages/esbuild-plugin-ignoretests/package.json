@@ -4,8 +4,8 @@
 	"private": false,
 	"version": "0.0.0",
 	"description": "An intuitive React.js fork me ribbon component for promoting open source project forks.",
-	"main": "./index.ts",
-	"types": "./index.ts",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/mayank1513/esbuild-plugin-ignoretests.git"
@@ -35,6 +35,8 @@
 		"esbuild",
 		"esbuild-plugin",
 		"esbuild-plugin-ignoretests",
+		"esbuild-plugin-ignore-test-files",
+		"esbuild-plugin-ignore-testfiles",
 		"esbuild-plugin-ignore",
 		"ignore",
 		"ignoretests",
