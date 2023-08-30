@@ -27,13 +27,18 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm i -g pnpm && pnpm i
         name: Install dependencies
+      - run: pnpm build
+        name: build plugin
+        working-directory: ./packages/esbuild-plugin-ignoretests
       - name: Publish to NPM
         run: |
           pnpm build && pnpm publish-package
+          cd dist
           sed -i -e "s/\"name\": \"/\"name\": \"@mayank1513\//" package.json
           sed -i -e "s/pnpm add /pnpm add @mayank1513\//" README.md
           sed -i -e "s/npm install /npm install @mayank1513\//" README.md
           sed -i -e "s/yarn add /yan add @mayank1513\//" README.md
+          sleep 30s
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
