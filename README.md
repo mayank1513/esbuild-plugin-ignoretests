@@ -2,6 +2,14 @@
 
 > ESBuild plugin to ignore/exclude test files from build.
 
+While building large libraries, we follow convention similar to `chakraui` -> component and corresponding tests for the component live in the same dedicated folder. In this scenario, `tsup` will build and include test file as well in the final build output. This is not desirable. This plugin will easily ignore test files from build process. You can also pass in custom regexp to ignore other files based on path.
+
+## Compatibility
+
+- JavaScript/TypeScript React libraries using `tsup` or other builders based on `esbuild`
+
+This plugin seamlessly integrates with `tsup` and any other builders based on `esbuild`.
+
 ## Install
 
 ```bash
@@ -10,6 +18,26 @@ $ pnpm add esbuild-plugin-ignoretests
 $ npm install esbuild-plugin-ignoretests
 # or
 $ yarn add esbuild-plugin-ignoretests
+```
+
+```ts
+// tsup.config.ts or tsup.config.js
+import { defineConfig } from "tsup";
+import ignoretestsPlugin from "esbuild-plugin-ignoretests";
+
+export default defineConfig(options => ({
+    ...
+    esbuildPlugins:[ignoretestsPlugin()]
+}));
+```
+
+optionally you can also pass custom regular expression.
+
+```ts
+export default defineConfig(options => ({
+    ...
+    esbuildPlugins:[ignoretestsPlugin({ customRegExp: /my-reg-exp/ })]
+}));
 ```
 
 ### 🤩 Don't forger to start this repo!
