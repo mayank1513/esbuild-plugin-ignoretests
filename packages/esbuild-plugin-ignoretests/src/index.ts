@@ -19,7 +19,7 @@ const ignoretestsPlugin: (options?: ignoretestsPluginOptions) => Plugin = option
 			return { contents: "" };
 		});
 		build.onEnd(result => {
-			result.outputFiles?.filter(f => !rxp.test(f.path));
+			result.outputFiles = result.outputFiles?.filter(f => !rxp.test(f.path));
 		});
 	},
 });
