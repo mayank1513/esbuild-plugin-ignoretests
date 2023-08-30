@@ -1,12 +1,12 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, test } from "vitest";
-import { ClientTest } from "./client-test";
+import { StarRepo } from "./star-repo";
 
-describe.concurrent("client-test", () => {
+describe.concurrent("star-repo", () => {
 	afterEach(cleanup);
 
 	test("check if h1 heading exists", async ({ expect }) => {
-		render(<ClientTest />);
-		expect(screen.getByTestId("client-test-h1").textContent).toBe("client test");
+		render(<StarRepo href="https://my-repo" />);
+		expect(screen.getByTestId("star-repo-h1").textContent).toBe("Star Repo");
 	});
 });
