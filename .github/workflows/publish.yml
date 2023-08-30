@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
+      - run: sleep 3m
       - run: npm i -g pnpm && pnpm i
         name: Install dependencies
       - name: Publish to NPM

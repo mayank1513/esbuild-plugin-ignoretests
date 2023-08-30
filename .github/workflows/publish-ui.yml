@@ -1,4 +1,4 @@
-name: Publish (NPM & GPR)
+name: Publish UI (NPM & GPR)
 
 # publish only when package json has changed - assuming version upgrade
 on:
