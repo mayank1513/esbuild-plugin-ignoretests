@@ -18,7 +18,6 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsc && node touchup.js",
-		"test": "vitest run",
 		"publish-package": "cd dist && npm publish --access public"
 	},
 	"devDependencies": {
