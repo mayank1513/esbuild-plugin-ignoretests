@@ -1,15 +1,15 @@
-# Fork Me React.js component
+# Fork Me React.js component [![Version](https://img.shields.io/npm/v/fork-me-react.svg?colorB=green)](https://www.npmjs.com/package/fork-me-react) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/dt/fork-me-react.svg)](https://www.npmjs.com/package/fork-me-react) [![Unit Tests](https://github.com/mayank1513/esbuild-plugin-ignoretests/actions/workflows/test.yml/badge.svg)](https://github.com/mayank1513/esbuild-plugin-ignoretests/actions/workflows/test.yml) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/fork-me-react)
 
 A simple fork me component for React.js projects!
 
 ## Install
 
 ```bash
-$ pnpm add @mayank1513/fork-me
+$ pnpm add fork-me-react
 # or
-$ npm install @mayank1513/fork-me
+$ npm install fork-me-react
 # or
-$ yarn add @mayank1513/fork-me
+$ yarn add fork-me-react
 ```
 
 ## Add on your page
