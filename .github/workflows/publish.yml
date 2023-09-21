@@ -38,6 +38,9 @@ jobs:
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.event.repository.owner.login }}
+          REPO: ${{ github.event.repository.name }}
 
       - uses: actions/setup-node@v3
         with:
