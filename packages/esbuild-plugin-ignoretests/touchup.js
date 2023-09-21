@@ -38,16 +38,18 @@ if (process.env.TOKEN) {
 	const tag_name = `v${packageJson.version}`;
 	const name = `Release ${tag_name}`;
 	/** Create a release */
-	octokit.request("POST /repos/{owner}/{repo}/releases", {
-		...octoOptions,
-		tag_name,
-		target_commitish: "main",
-		name,
-		draft: false,
-		prerelease: false,
-		generate_release_notes: true,
-		headers: {
-			"X-GitHub-Api-Version": "2022-11-28",
-		},
-	});
+	try {
+		octokit.request("POST /repos/{owner}/{repo}/releases", {
+			...octoOptions,
+			tag_name,
+			target_commitish: "main",
+			name,
+			draft: false,
+			prerelease: false,
+			generate_release_notes: true,
+			headers: {
+				"X-GitHub-Api-Version": "2022-11-28",
+			},
+		});
+	} catch {}
 }
