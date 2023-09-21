@@ -7,7 +7,7 @@ type ignoretestsPluginOptions = {
 
 /** This plugin prevents building test files by esbuild. DTS may still geenrate type files for the tests with only { } as file content*/
 const ignoretestsPlugin: (options?: ignoretestsPluginOptions) => Plugin = options => ({
-	name: "esbuild-react18-useclient",
+	name: "esbuild-plugin-ignoretests",
 	setup(build) {
 		const rxp = options?.customRegExp || /\.(test|spec|check)\./i;
 		/** not able to mark files as external */

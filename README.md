@@ -20,6 +20,8 @@ $ npm install esbuild-plugin-ignoretests
 $ yarn add esbuild-plugin-ignoretests
 ```
 
+## Usage
+
 ```ts
 // tsup.config.ts or tsup.config.js
 import { defineConfig } from "tsup";

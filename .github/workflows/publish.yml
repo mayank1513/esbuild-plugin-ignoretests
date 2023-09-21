@@ -25,7 +25,6 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
-      - run: sleep 3m
       - run: npm i -g pnpm && pnpm i
         name: Install dependencies
       - name: Publish to NPM
@@ -35,8 +34,7 @@ jobs:
           sed -i -e "s/\"name\": \"/\"name\": \"@mayank1513\//" package.json
           sed -i -e "s/pnpm add /pnpm add @mayank1513\//" README.md
           sed -i -e "s/npm install /npm install @mayank1513\//" README.md
-          sed -i -e "s/yarn add /yan add @mayank1513\//" README.md
-          sleep 30s
+          sed -i -e "s/yarn add /yarn add @mayank1513\//" README.md
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
