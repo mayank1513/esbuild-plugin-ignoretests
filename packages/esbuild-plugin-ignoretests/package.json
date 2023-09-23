@@ -2,8 +2,8 @@
 	"name": "esbuild-plugin-ignoretests",
 	"author": "Mayank Kumar Chaudhari <https://mayank-chaudhari.vercel.app>",
 	"private": false,
-	"version": "0.0.6",
-	"description": "An intuitive React.js fork me ribbon component for promoting open source project forks.",
+	"version": "0.0.7",
+	"description": "ESBuild plugin to ignore test files",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"repository": {
@@ -17,7 +17,7 @@
 	"sideEffects": false,
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc && node touchup.js",
+		"build": "tsc",
 		"publish-package": "cd dist && npm publish --access public"
 	},
 	"devDependencies": {

@@ -30,7 +30,7 @@ jobs:
         name: Install dependencies
       - name: Publish to NPM
         run: |
-          pnpm build && pnpm publish-package
+          pnpm build && node touchup.js && pnpm publish-package
           cd dist
           sed -i -e "s/\"name\": \"/\"name\": \"@mayank1513\//" package.json
           sed -i -e "s/pnpm add /pnpm add @mayank1513\//" README.md
